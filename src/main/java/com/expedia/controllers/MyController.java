@@ -1,12 +1,12 @@
 package com.expedia.controllers;
 import java.net.URI;
-
 import com.expedia.model.LatLong;
 import com.expedia.model.Places;
 import com.expedia.model.Types;
 import com.expedia.repository.LatLongRepository;
 import com.expedia.repository.PlacesRepository;
 import com.expedia.repository.TypesRepository;
+import org.jboss.jandex.Main;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +18,7 @@ import com.googleapis.pojo.GoogleMapPojo;
 
   @RestController
 public class MyController {
+	  
 
 	  @Autowired
 	  private TypesRepository typesRepository;
@@ -52,6 +53,7 @@ public class MyController {
 		  }
 		  return ResponseEntity.accepted().build();
 	  }
+	  }
 
 //  @PostMapping("/insert")
 //	public ResponseEntity<Object> CreateLocation(@RequestBody UserSearchResult result) {
@@ -75,4 +77,4 @@ public class MyController {
 //	//return ResponseEntity.created(location).build();
 //	return "";
 //	}
-}
+
